@@ -1,4 +1,4 @@
-#!/bin/bash -ex
+#!/bin/bash -x
 
 ## Set up the Bash configuration files.
 ln bash/bashrc $HOME/.bashrc
