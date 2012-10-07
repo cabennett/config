@@ -1,0 +1,40 @@
+" Use Vim settings, not Vi...
+set nocompatible
+
+" Searching Options
+set incsearch       "show results while typing
+set hlsearch        "highlights results
+
+" Visual Appeal
+syntax on
+set number
+set linespace=4
+
+" Backspaces...
+set backspace=indent,eol,start
+
+" FUCK BELLS!
+set noerrorbells
+set novisualbell
+
+" Wildcards in search:
+set magic
+
+" Indent Settings
+set tabstop=4
+set shiftwidth=4
+set softtabstop=4
+set expandtab
+set autoindent
+
+" Enable The Mouse
+set mouse=a
+
+" Code Folding
+set foldmethod=indent
+set foldnestmax=8
+set foldenable
+set foldlevel=1
+
+" Command Mappings
+nnoremap <silent> <F8> :TlistToggle<CR>

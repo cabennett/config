@@ -1,0 +1,8 @@
+#!/bin/bash -ex
+
+## Set up the Bash configuration files.
+ln bash/bashrc $HOME/.bashrc
+ln bash/bash_profile $HOME/.bash_profile
+
+## Set up the Vim configuration files.
+ln vim/vimrc $HOME/.vimrc

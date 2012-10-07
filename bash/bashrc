@@ -1,0 +1,41 @@
+## Color Variables
+txtblk='\e[0;20m' #Black
+txtred='\e[0;31m' #Red
+txtgrn='\e[0;32m' #Green
+txtylw='\e[0;33m' #Yellow
+txtblu='\e[0;34m' #Blue
+txtpur='\e[0;35m' #Purple
+txtcyn='\e[0;36m' #Cyan
+txtwht='\e[0;37m' #White
+
+## Bash Prompt
+RET_PROMPT='$(if [ $? -eq 0 ];
+		then echo -ne "\[$txtgrn\]:)\[$txtblk\]"; 
+		else echo -ne "\[$txtred\]:(\[$txtblk\]"; 
+	      fi;)'
+
+USR_PROMPT='$(if [ $(id -u) -eq 0 ];
+		then echo -ne "\[$txtred\]\u\[$txtblk\]";
+		else echo -ne "\u";
+	      fi;)'
+
+PS1="$RET_PROMPT $USR_PROMPT \[$txtblk\]/\W # "
+
+## Common Command Aliases
+alias ls='ls -hF --color=auto'
+alias la='ls -a'
+alias ll='ls -l'
+alias lx='ll -BX'
+alias lt='ll -rt'
+
+## Common Functions
+cl()
+{
+    if [ -d $1 ];
+    then
+        cd $1
+        ls
+    else
+        echo "bash: cl: $1: Directory not found."
+    fi
+}
